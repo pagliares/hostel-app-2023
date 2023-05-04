@@ -1,7 +1,19 @@
 package hostelapp.model;
 public class Guest {
-    private String name = "";
+    private String name;
     private String lastName;
+
+    public Guest() {
+       this("");
+    }
+    public Guest(String name){
+        this(name, "");
+    }
+
+    public Guest(String name, String lastName){
+        this.name = name;
+        this.lastName = lastName;
+    }
 
      public String getName() {
         return name;
