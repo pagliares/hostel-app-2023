@@ -7,6 +7,8 @@ public class Guest {
 
     private String email;
 
+    private Date birthday;
+
     public Guest() {
        this("");
     }
@@ -55,5 +57,11 @@ public class Guest {
         this.email = email;
     }
 
-    
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
 }

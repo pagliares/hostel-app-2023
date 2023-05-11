@@ -1,4 +1,5 @@
 import hostelapp.model.Address;
+import hostelapp.model.Date;
 import hostelapp.model.Guest;
 
 public class GuestTest {
@@ -7,6 +8,14 @@ public class GuestTest {
         florentino.setName("Florentino");
         florentino.setLastName("Ariza");
         florentino.setEmail("ariza@gmail.com");
+
+        Date birthday = new Date();
+        birthday.setDay(35);
+        birthday.setMonth(2);
+        birthday.setYear(1970);
+
+        florentino.setBirthday(birthday);
+
 
         Address address = new Address();
         address.setAddress("Rua Joaquim Lázaro Gomes");
@@ -20,9 +29,14 @@ public class GuestTest {
         Address florentinoAddress = florentino.getAddress();
         String city = florentinoAddress.getCity();
 
+//        String formattedBirthDay = florentino.getBirthday().getDay() + "/" +
+//                florentino.getBirthday().getMonth() + "/" +
+//                florentino.getBirthday().getYear();
+
         System.out.println("Name...: " + florentino.getName());
         System.out.println("Last name...: " + florentino.getLastName());
         System.out.println("Email...: " + florentino.getEmail());
+        System.out.println("Birthdate..: " + florentino.getBirthday());
         System.out.println("Address...: " + florentino.getAddress().getAddress());
         System.out.println("City....: " + city);
         System.out.println("State...: " + florentino.getAddress().getState());
