@@ -5,6 +5,8 @@ public class Guest {
 
     private Address address;
 
+    private String email;
+
     public Guest() {
        this("");
     }
@@ -44,4 +46,14 @@ public class Guest {
     public void setAddress(Address address) {
         this.address = address;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    
 }

@@ -6,6 +6,7 @@ public class GuestTest {
         Guest florentino = new Guest();
         florentino.setName("Florentino");
         florentino.setLastName("Ariza");
+        florentino.setEmail("ariza@gmail.com");
 
         Address address = new Address();
         address.setAddress("Rua Joaquim Lázaro Gomes");
@@ -21,7 +22,8 @@ public class GuestTest {
 
         System.out.println("Name...: " + florentino.getName());
         System.out.println("Last name...: " + florentino.getLastName());
-        System.out.println("Address...: " + florentino.getAddress());
+        System.out.println("Email...: " + florentino.getEmail());
+        System.out.println("Address...: " + florentino.getAddress().getAddress());
         System.out.println("City....: " + city);
         System.out.println("State...: " + florentino.getAddress().getState());
         System.out.println("Zip Code..: " + florentino.getAddress().getZipCode());
