@@ -1,4 +1,7 @@
 package hostelapp.model;
+
+import java.util.*;
+
 public class Guest {
     private String name;
     private String lastName;
@@ -8,6 +11,9 @@ public class Guest {
     private String email;
 
     private Date birthday;
+
+    private List<Reservation> reservations = new ArrayList<>();
+
 
     public Guest() {
        this("");
@@ -63,5 +69,17 @@ public class Guest {
 
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
+    }
+
+    public List<Reservation> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(List<Reservation> reservations) {
+        this.reservations = reservations;
+    }
+
+    public void addReservation(Reservation reservation) {
+        reservations.add(reservation);
     }
 }
