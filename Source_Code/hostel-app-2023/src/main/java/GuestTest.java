@@ -1,13 +1,12 @@
-import hostelapp.model.Address;
+import hostelapp.model.*;
 import hostelapp.model.Date;
-import hostelapp.model.Guest;
-import hostelapp.model.Reservation;
 
 import java.util.*;
 
 public class GuestTest {
     public static void main(String[] args) {
         Guest florentino = new Guest();
+        florentino.setTitle(Title.MS);
         florentino.setName("Florentino");
         florentino.setLastName("Ariza");
         florentino.setEmail("ariza@gmail.com");
@@ -57,6 +56,7 @@ public class GuestTest {
         Address florentinoAddress = florentino.getAddress();
         String city = florentinoAddress.getCity();
 
+        System.out.println("Title...: " + florentino.getTitle());
         System.out.println("Name...: " + florentino.getName());
         System.out.println("Last name...: " + florentino.getLastName());
         System.out.println("Email...: " + florentino.getEmail());

@@ -14,6 +14,7 @@ public class Guest {
 
     private List<Reservation> reservations = new ArrayList<>();
 
+    private Title title;
 
     public Guest() {
        this("");
@@ -81,5 +82,13 @@ public class Guest {
 
     public void addReservation(Reservation reservation) {
         reservations.add(reservation);
+    }
+
+    public Title getTitle() {
+        return title;
+    }
+
+    public void setTitle(Title title) {
+        this.title = title;
     }
 }
