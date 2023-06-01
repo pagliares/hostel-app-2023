@@ -5,6 +5,25 @@ import java.util.*;
 
 public class GuestTest {
     public static void main(String[] args) {
+
+        Hostel hostel = Hostel.getHostel();
+        hostel.setName("Sparkling Water");
+        hostel.setEmail("sparkling@gmail.com");
+        hostel.setPhone("+(55)-35-3343-1234");
+
+        Address hostelAddress = new Address();
+        hostelAddress.setAddress("Rua Camilo Soares");
+        hostelAddress.setCity("Caxambu");
+        hostelAddress.setState("MG");
+        hostelAddress.setCountry("Brazil");
+        hostelAddress.setZipCode("123400-000");
+
+        hostel.setAddress(hostelAddress);
+
+        System.out.println("Printing hostel details:");
+        System.out.println(hostel.toString());
+        System.out.println();
+
         Guest florentino = new Guest();
         florentino.setTitle(Title.MS);
         florentino.setName("Florentino");
