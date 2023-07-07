@@ -10,6 +10,8 @@ public class Room {
     private double dimension;
     private RoomType roomType;
 
+    private double dailyRate;
+
     public Room() {
     }
 
@@ -66,6 +68,14 @@ public class Room {
 
     public void setRoomType(RoomType roomType) {
         this.roomType = roomType;
+    }
+
+    public double getDailyRate() {
+        return dailyRate;
+    }
+
+    public void setDailyRate(double dailyRate) {
+        this.dailyRate = dailyRate;
     }
 
     @Override

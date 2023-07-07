@@ -1,5 +1,5 @@
 package hostelapp.model;
 
 public enum RoomType {
-    SINGLE, DOUBLE;
+    SINGLE, DOUBLE, EXECUTIVE_SUITE;
 }

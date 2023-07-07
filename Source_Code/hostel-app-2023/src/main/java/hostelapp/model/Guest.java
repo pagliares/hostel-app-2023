@@ -3,14 +3,14 @@ package hostelapp.model;
 import java.util.*;
 
 public class Guest {
-    private String name;
+    private String firstName;
     private String lastName;
 
     private Address address;
 
     private String email;
 
-    private Date birthday;
+    private Date birthDate;
 
     private List<Reservation> reservations = new ArrayList<>();
 
@@ -19,22 +19,22 @@ public class Guest {
     public Guest() {
        this("");
     }
-    public Guest(String name){
-        this(name, "");
+    public Guest(String firstName){
+        this(firstName, "");
     }
 
-    public Guest(String name, String lastName){
-        this.name = name;
+    public Guest(String firstName, String lastName){
+        this.firstName = firstName;
         this.lastName = lastName;
     }
 
-     public String getName() {
-        return name;
+     public String getFirstName() {
+        return firstName;
     }
 
      public boolean setName(String name) {
         if (name.length() > 2) {
-            this.name = name;
+            this.firstName = name;
             return true;
         }
         return false;
@@ -64,12 +64,12 @@ public class Guest {
         this.email = email;
     }
 
-    public Date getBirthday() {
-        return birthday;
+    public Date getBirthDate() {
+        return birthDate;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 
     public List<Reservation> getReservations() {

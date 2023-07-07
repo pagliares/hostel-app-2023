@@ -2,6 +2,7 @@ package hostelapp.model;
 
 import hostelapp.model.exceptions.RoomNotFoundException;
 
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -9,7 +10,11 @@ public class Hostel {
     private String name;
     private Address address;
     private String phone;
-    private String email;
+    private String contactEmail;
+
+    private String description;
+
+    private LocalDate inaugurationDate;
 
     private static final Hostel hostel = new Hostel();
 
@@ -42,12 +47,12 @@ public class Hostel {
         this.phone = phone;
     }
 
-    public String getEmail() {
-        return email;
+    public String getContactEmail() {
+        return contactEmail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setContactEmail(String contactEmail) {
+        this.contactEmail = contactEmail;
     }
 
     public static Hostel getHostel(){
@@ -60,6 +65,22 @@ public class Hostel {
 
     public void setRooms(Set<Room> rooms) {
         this.rooms = rooms;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public LocalDate getInaugurationDate() {
+        return inaugurationDate;
+    }
+
+    public void setInaugurationDate(LocalDate inaugurationDate) {
+        this.inaugurationDate = inaugurationDate;
     }
 
     public Room getRoomByNumber(String number) throws RoomNotFoundException {
@@ -80,7 +101,9 @@ public class Hostel {
                 "name='" + name + '\'' +
                 ", address=" + address +
                 ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
+                ", contactEmail='" + contactEmail + '\'' +
+                ", description='" + description + '\'' +
+                ", inaugurationDate=" + inaugurationDate +
                 ", rooms=" + rooms +
                 '}';
     }

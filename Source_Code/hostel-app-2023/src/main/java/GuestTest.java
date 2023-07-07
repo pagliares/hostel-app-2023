@@ -1,15 +1,20 @@
 import hostelapp.model.*;
 import hostelapp.model.Date;
 
+import java.time.LocalDate;
 import java.util.*;
 
 public class GuestTest {
     public static void main(String[] args) {
 
+        String description = "The hostel Sparkling Water is located in a small town called Caxambu-MG";
         Hostel hostel = Hostel.getHostel();
         hostel.setName("Sparkling Water");
-        hostel.setEmail("sparkling@gmail.com");
+        hostel.setContactEmail("sparkling@gmail.com");
         hostel.setPhone("+(55)-35-3343-1234");
+        hostel.setDescription(description);
+        hostel.setContactEmail("sparkling-water@gmail.com");
+        hostel.setInaugurationDate(LocalDate.of(2000, 5, 7));
 
         Address hostelAddress = new Address();
         hostelAddress.setAddress("Rua Camilo Soares");
@@ -35,7 +40,7 @@ public class GuestTest {
         birthday.setMonth(2);
         birthday.setYear(1970);
 
-        florentino.setBirthday(birthday);
+        florentino.setBirthDate(birthday);
 
         Address address = new Address();
         address.setAddress("Rua Joaquim Lázaro Gomes");
@@ -76,10 +81,10 @@ public class GuestTest {
         String city = florentinoAddress.getCity();
 
         System.out.println("Title...: " + florentino.getTitle());
-        System.out.println("Name...: " + florentino.getName());
+        System.out.println("Name...: " + florentino.getFirstName());
         System.out.println("Last name...: " + florentino.getLastName());
         System.out.println("Email...: " + florentino.getEmail());
-        System.out.println("Birthdate..: " + florentino.getBirthday());
+        System.out.println("Birthdate..: " + florentino.getBirthDate());
         System.out.println("Address...: " + florentino.getAddress().getAddress());
         System.out.println("City....: " + city);
         System.out.println("State...: " + florentino.getAddress().getState());
@@ -102,15 +107,15 @@ public class GuestTest {
         gregor.setLastName("Samsa");
 
         System.out.println();
-        System.out.println("Name...: " + fermina.getName());
+        System.out.println("Name...: " + fermina.getFirstName());
         System.out.println("Last name...: " + fermina.getLastName());
 
         System.out.println();
-        System.out.println("Name...: " + atticus.getName());
+        System.out.println("Name...: " + atticus.getFirstName());
         System.out.println("Last name...: " + atticus.getLastName());
 
         System.out.println();
-        System.out.println("Name...: " + gregor.getName());
+        System.out.println("Name...: " + gregor.getFirstName());
         System.out.println("Last name...: " + gregor.getLastName());
 
     }

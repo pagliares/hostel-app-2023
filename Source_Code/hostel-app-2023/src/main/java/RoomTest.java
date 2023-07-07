@@ -11,7 +11,7 @@ public class RoomTest {
         Hostel hostel = Hostel.getHostel();
         hostel.setName("Hostel Sparkling Water");
         hostel.setPhone("+(55) 35-91111-1123");
-        hostel.setEmail("sparkling_water@gmail.com");
+        hostel.setContactEmail("sparkling_water@gmail.com");
 
         Address address = new Address();
         address.setAddress("Nightmare street, 13");
