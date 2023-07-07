@@ -1,5 +1,10 @@
 package hostelapp.model;
 
+import hostelapp.model.exceptions.RoomNotFoundException;
+
+import java.util.HashSet;
+import java.util.Set;
+
 public class Hostel {
     private String name;
     private Address address;
@@ -7,6 +12,8 @@ public class Hostel {
     private String email;
 
     private static final Hostel hostel = new Hostel();
+
+    private Set<Room> rooms = new HashSet<>();
 
     private Hostel() {
     }
@@ -47,11 +54,34 @@ public class Hostel {
         return hostel;
     }
 
+    public Set<Room> getRooms() {
+        return rooms;
+    }
+
+    public void setRooms(Set<Room> rooms) {
+        this.rooms = rooms;
+    }
+
+    public Room getRoomByNumber(String number) throws RoomNotFoundException {
+        for (Room room: rooms) {
+            if (room.getNumber().equals(number))
+                return room;
+        }
+        throw new RoomNotFoundException("Room not found! : ", number);
+    }
+
+    public void addRoom(Room room){
+        this.rooms.add(room);
+    }
+
     @Override
     public String toString() {
-        return "name='" + name + '\'' +
+        return "Hostel{" +
+                "name='" + name + '\'' +
                 ", address=" + address +
                 ", phone='" + phone + '\'' +
-                ", email='" + email + '\'';
+                ", email='" + email + '\'' +
+                ", rooms=" + rooms +
+                '}';
     }
 }
